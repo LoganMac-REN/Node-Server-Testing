@@ -1,14 +1,19 @@
 // server.js
 require("dotenv").config();
 const express = require("express");
-const { sql, query } = require("./db");
+const { query } = require("./db");
 const cors = require("cors");
 
 const app = express();
-app.use(cors()); // or restrict to your frontend domain here
+app.use(cors());
 app.use(express.json());
 
-app.get("/api/shippedRevenue", async (req, res) => {
+// --- Cache state ---
+let shippedCache = { value: 0, asOf: null };
+const CACHE_TTL_MS = 30 * 60 * 1000; // 30 minutes
+
+// Function to refresh cache from DB
+async function refreshCache() {
   try {
     const r = await query(`
       SELECT SUM(Price) AS ShippedRevenue
@@ -18,11 +23,22 @@ app.get("/api/shippedRevenue", async (req, res) => {
     `);
 
     const shipped = r.recordset?.[0]?.ShippedRevenue ?? 0;
-    res.json({ shippedRevenue: Number(shipped), asOf: new Date().toISOString() });
+    shippedCache = { value: Number(shipped), asOf: new Date().toISOString() };
+    console.log("Cache updated:", shippedCache);
   } catch (e) {
-    console.error(e);
-    res.status(500).json({ error: "Query failed" });
+    console.error("Failed to refresh cache:", e);
   }
+}
+
+// Refresh once at startup
+refreshCache();
+
+// Refresh every 30 minutes automatically
+setInterval(refreshCache, CACHE_TTL_MS);
+
+// API always returns cached value
+app.get("/api/shippedRevenue", (req, res) => {
+  res.json(shippedCache);
 });
 
 const port = process.env.PORT || 3000;
