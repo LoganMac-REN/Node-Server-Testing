@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ren Internal - Engineering</title>
+    <link rel="stylesheet" href="../style.css?v=15" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+  <body>
+    <special-header></special-header>
+    <!-- Page -->
+    <main class="content">
+      <!-- Professional Header Card -->
+      <div class="page-header">
+        <div class="header-content">
+          <div class="title-section">
+            <h1 class="page-title">QUALITY</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="coming-soon-section">
+        <div class="coming-soon-card">
+          <div class="coming-soon-content">
+            <h3>Quality Section Coming Soon</h3>
+            <p>This page will contain Quality-related Key Performance Indicators, Tools and Dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Top of Page Button -->
+    <button class="top-of-page-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">↑</button>
+
+    <script src="../script.js?v=5"></script>
+    <script src="/customComponents/header.js"></script>
+
+    <!-- Header Navigation JavaScript -->
+    <script>
+      function toggleHeaderNav() {
+        const menu = document.getElementById("headerNavMenu");
+        const button = document.querySelector(".header-nav-button");
+
+        menu.classList.toggle("active");
+        button.classList.toggle("active");
+      }
+
+      function closeHeaderNav() {
+        const menu = document.getElementById("headerNavMenu");
+        const button = document.querySelector(".header-nav-button");
+
+        menu.classList.remove("active");
+        button.classList.remove("active");
+      }
+
+      // Mobile Menu Functions
+      function toggleMobileMenu() {
+        document.body.classList.toggle("mobile-menu-open");
+      }
+
+      function closeMobileMenu() {
+        document.body.classList.remove("mobile-menu-open");
+      }
+
+      // Mobile Menu Section Toggle Function
+      function toggleMobileSection(titleElement) {
+        const section = titleElement.parentElement;
+        section.classList.toggle("collapsed");
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        const navDropdown = document.querySelector(".header-right");
+        const menu = document.getElementById("headerNavMenu");
+        const button = document.querySelector(".header-nav-button");
+
+        if (navDropdown && !navDropdown.contains(event.target)) {
+          menu.classList.remove("active");
+          button.classList.remove("active");
+        }
+      });
+
+      // Close mobile menu on window resize if screen becomes large
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 1200) {
+          closeMobileMenu();
+        }
+      });
+
+      // Enhanced smooth scrolling with offset for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            // Calculate offset to account for header and provide padding
+            const headerHeight = document.querySelector(".topbar").offsetHeight;
+            const additionalOffset = 30; // Extra padding so title is clearly visible
+            const targetPosition = target.offsetTop - headerHeight - additionalOffset;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Initialize mobile menu sections - start with all collapsed except current page section
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".mobile-menu-section");
+        sections.forEach((section) => {
+          // Find if this section contains the active menu item (current page)
+          const activeItem = section.querySelector(".mobile-menu-item.active");
+          if (!activeItem) {
+            // Collapse sections that don't contain the active item
+            section.classList.add("collapsed");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

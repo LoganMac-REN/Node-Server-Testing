@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ren Internal</title>
+    <link rel="stylesheet" href="../style.css?v=13" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+  <body>
+    <special-header></special-header>
+    <!-- Page -->
+    <main class="content">
+      <!-- Professional Header Section -->
+      <div class="page-header">
+        <div class="header-content">
+          <div class="title-section">
+            <h1 class="page-title">Batch Stage Update</h1>
+            <p class="page-subtitle">To Update multiple Work Order Stages at once</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- OTD Section -->
+      <div id="otd-section">
+        <div class="top-report">
+          <div class="framecard">
+            <iframe
+              id="powerapp-frame"
+              src="https://apps.powerapps.com/play/d3237cc2-5b8a-4aab-b370-f30781e3e301?source=iframe"
+              allowfullscreen="true"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Top of Page Button -->
+    <button class="top-of-page-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+    <script src="/customComponents/header.js"></script>
+    <!-- Mobile Menu JavaScript -->
+    <script>
+      // Mobile Menu Functions
+      function toggleMobileMenu() {
+        const body = document.body;
+        if (body.classList.contains("mobile-menu-open")) {
+          body.classList.remove("mobile-menu-open");
+          // Restore body scroll
+          document.body.style.overflow = "";
+        } else {
+          body.classList.add("mobile-menu-open");
+          // Prevent body scroll when menu is open
+          document.body.style.overflow = "hidden";
+        }
+      }
+
+      function closeMobileMenu() {
+        document.body.classList.remove("mobile-menu-open");
+        // Restore body scroll
+        document.body.style.overflow = "";
+      }
+
+      // Mobile Menu Section Toggle Function
+      function toggleMobileSection(titleElement) {
+        const section = titleElement.parentElement;
+        section.classList.toggle("collapsed");
+      }
+
+      // Close mobile menu when clicking on overlay
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("mobile-menu-overlay")) {
+          closeMobileMenu();
+        }
+      });
+
+      // Close mobile menu on window resize if screen becomes large
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 1200) {
+          closeMobileMenu();
+        }
+      });
+    </script>
+  </body>
+</html>

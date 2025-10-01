@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testing</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ren Internal</title>
+    <link rel="stylesheet" href="../style.css" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
   </head>
   <body>
     <special-header></special-header>
@@ -14,20 +17,17 @@
       <div class="page-header">
         <div class="header-content">
           <div class="title-section">
-            <h1 class="page-title">OTD Dashboard</h1>
-            <p class="page-subtitle">On-Time Delivery Performance & Analytics</p>
+            <h1 class="page-title">Look-Up Tool</h1>
           </div>
         </div>
       </div>
-
       <!-- OTD Section -->
       <div id="otd-section">
         <div class="top-report">
           <div class="framecard">
             <iframe
-              id="powerbi-frame"
-              title="TV Ottawa · Foyer"
-              src="https://app.fabric.microsoft.com/view?r=eyJrIjoiOWFhMmJiMTMtMGE1OS00Nzc1LWE4NjEtOGNlOTViN2E0YTNjIiwidCI6ImU0YzRmNmNmLTZmZWMtNGFlMy1hN2I3LTdiMzQ3ZWMwMDcyOSJ9"
+              id="powerapp-frame"
+              src="https://apps.powerapps.com/play/dd65fdc1-b28f-41ed-9e26-ede7dbadb451?source=iframe"
               allowfullscreen="true"
             >
             </iframe>
@@ -38,7 +38,8 @@
 
     <!-- Top of Page Button -->
     <button class="top-of-page-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">↑</button>
-    <script src="script.js"></script>
-    <script src="customComponents/header.js"></script>
+
+    <script src="javascript.js?v=5"></script>
+    <script src="/customComponents/header.js"></script>
   </body>
 </html>
