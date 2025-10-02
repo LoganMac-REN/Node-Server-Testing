@@ -107,8 +107,8 @@ class SpecialHeader extends HTMLElement {
             <a href="palletsApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">Pallet Receiving Tool</a>
             <a href="skuDetailsApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">SKU Update Tool</a>
             <a href="customerHoldApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">Customer Hold Tool</a>
-            <a href="pages/npi-tool.html" class="mobile-menu-item" onclick="closeMobileMenu()">NPI Update Tool</a>
-            <a href="pages/BatchUpdate.html" class="mobile-menu-item" onclick="closeMobileMenu()">Work Order Update Tool</a>
+            <a href="npi-tool.html" class="mobile-menu-item" onclick="closeMobileMenu()">NPI Update Tool</a>
+            <a href="BatchUpdate.html" class="mobile-menu-item" onclick="closeMobileMenu()">Work Order Update Tool</a>
           </div>
         </div>
 
@@ -137,35 +137,25 @@ class SpecialHeader extends HTMLElement {
   }
 
   setActiveLink() {
-    // Move normalizePath function to the top
-    function normalizePath(p) {
-      let path = (p || "").split("?")[0].split("#")[0];
-      if (!path || path === "/") path = "/index.html"; // treat root as index
-      if (path.endsWith("/") && path !== "/") path = path.slice(0, -1);
-      return path.toLowerCase();
-    }
+    const current = location.pathname.toLowerCase();
 
-    const current = normalizePath(location.pathname);
-
-    // 1) Clear all actives
+    // Clear all actives
     const allLinks = this.querySelectorAll("a[href]");
     allLinks.forEach((a) => a.classList.remove("active"));
 
-    // 2) Only consider links inside submenus (desktop + mobile), skip #/js voids
+    // Only consider links inside submenus (desktop + mobile), skip #/js voids
     const pageLinks = this.querySelectorAll(".sub a[href], .mobile-menu-items a[href]");
 
     pageLinks.forEach((link) => {
-      const rawHref = (link.getAttribute("href") || "").trim();
+      const rawHref = (link.getAttribute("href") || "").trim().toLowerCase();
       if (!rawHref || rawHref === "#" || rawHref.startsWith("javascript:")) return;
 
-      try {
-        const linkPath = normalizePath(new URL(rawHref, location.origin).pathname);
-        if (linkPath === current) {
-          link.classList.add("active");
-        }
-      } catch (error) {
-        // Handle any URL parsing errors gracefully
-        console.warn("Could not parse URL:", rawHref, error);
+      // Simple filename comparison
+      const linkFile = rawHref.split("/").pop().split("?")[0].split("#")[0];
+      const currentFile = current.split("/").pop().split("?")[0].split("#")[0];
+
+      if (linkFile === currentFile) {
+        link.classList.add("active");
       }
     });
   }
