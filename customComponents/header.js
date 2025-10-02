@@ -3,7 +3,7 @@ class SpecialHeader extends HTMLElement {
     this.innerHTML = `
     <header class="topbar">
       <div class="brand">
-        <img src="/Images/renaissance-logo-full-color-rgb.svg" alt="Renaissance Repair & Supply" class="brand-logo" />
+        <img src="../images/renaissance-logo-full-color-rgb.svg" alt="Renaissance Repair & Supply" class="brand-logo" />
       </div>
       <!-- Desktop Navigation -->
       <div class="bar-inner">
@@ -20,11 +20,11 @@ class SpecialHeader extends HTMLElement {
             <li class="has-sub">
               <a href="#" class="toplink">Departments</a>
               <ul class="sub">
-                <li><a href="../pages/operations.html">Operations</a></li>
-                <li><a href="../pages/engineering.html">Engineering</a></li>
-                <li><a href="../pages/supplychain.html">Supply Chain</a></li>
-                <li><a href="../pages/quality.html">Quality</a></li>
-                <li><a href="../pages/dashboards.html">Dashboards</a></li>
+                <li><a href= "operations.html">Operations</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+                <li><a href="supplychain.html">Supply Chain</a></li>
+                <li><a href="quality.html">Quality</a></li>
+                <li><a href="dashboards.html">Dashboards</a></li>
               </ul>
             </li>
 
@@ -32,28 +32,28 @@ class SpecialHeader extends HTMLElement {
             <li class="has-sub">
               <a href="#" class="toplink">Applications</a>
               <ul class="sub">
-                <li><a href="../pages/palletsApp.html">Pallet Receiving Tool</a></li>
-                <li><a href="../pages/skuDetailsApp.html">SKU Update Tool</a></li>
-                <li><a href="../pages/customerHoldApp.html">Customer Hold Tool</a></li>
-                <li><a href="../pages/npi-tool.html">NPI Update Tool</a></li>
-                <li><a href="../pages/BatchUpdate.html">Work Order Update Tool</a></li>
+                <li><a href="palletsApp.html">Pallet Receiving Tool</a></li>
+                <li><a href="skuDetailsApp.html">SKU Update Tool</a></li>
+                <li><a href="customerHoldApp.html">Customer Hold Tool</a></li>
+                <li><a href="npi-tool.html">NPI Update Tool</a></li>
+                <li><a href="BatchUpdate.html">Work Order Update Tool</a></li>
               </ul>
             </li>
             <!-- TV Reports -->
             <li class="has-sub">
               <a href="#" class="toplink">TV Reports</a>
               <ul class="sub">
-                <li><a href="../pages/ROG-TEST-TV.html">Rogue-Test</a></li>
-                <li><a href="../pages/ROG-DEBUG-TV.html">Rogue-Debug</a></li>
-                <li><a href="../pages/RUN-TEST-TV.html">Run-Test</a></li>
-                <li><a href="../pages/RUN-DEBUG-TV.html">Run-Debug</a></li>
+                <li><a href="ROG-TEST-TV.html">Rogue-Test</a></li>
+                <li><a href="ROG-DEBUG-TV.html">Rogue-Debug</a></li>
+                <li><a href="RUN-TEST-TV.html">Run-Test</a></li>
+                <li><a href="RUN-DEBUG-TV.html">Run-Debug</a></li>
               </ul>
             </li>
             <!-- Floor Tools -->
             <li class="has-sub">
               <a href="#" class="toplink">Floor Tools</a>
               <ul class="sub">
-                <li><a href="../pages/lookuptool.html">Look-Up Tool</a></li>
+                <li><a href="lookuptool.html">Look-Up Tool</a></li>
               </ul>
             </li>
           </ul>
@@ -92,11 +92,11 @@ class SpecialHeader extends HTMLElement {
         <div class="mobile-menu-section collapsed">
           <h4 class="mobile-menu-section-title" onclick="toggleMobileSection(this)">Departments</h4>
           <div class="mobile-menu-items">
-            <a href="../pages/operations.html" class="mobile-menu-item" onclick="closeMobileMenu()">Operations</a>
-            <a href="../pages/engineering.html" class="mobile-menu-item" onclick="closeMobileMenu()">Engineering</a>
-            <a href="../pages/supplychain.html" class="mobile-menu-item" onclick="closeMobileMenu()">Supply Chain</a>
-            <a href="../pages/quality.html" class="mobile-menu-item" onclick="closeMobileMenu()">Quality</a>
-            <a href="../pages/dashboards.html" class="mobile-menu-item" onclick="closeMobileMenu()">Dashboards</a>
+            <a href="operations.html" class="mobile-menu-item" onclick="closeMobileMenu()">Operations</a>
+            <a href="engineering.html" class="mobile-menu-item" onclick="closeMobileMenu()">Engineering</a>
+            <a href="supplychain.html" class="mobile-menu-item" onclick="closeMobileMenu()">Supply Chain</a>
+            <a href="quality.html" class="mobile-menu-item" onclick="closeMobileMenu()">Quality</a>
+            <a href="dashboards.html" class="mobile-menu-item" onclick="closeMobileMenu()">Dashboards</a>
           </div>
         </div>
 
@@ -104,11 +104,11 @@ class SpecialHeader extends HTMLElement {
         <div class="mobile-menu-section collapsed">
           <h4 class="mobile-menu-section-title" onclick="toggleMobileSection(this)">Applications</h4>
           <div class="mobile-menu-items">
-            <a href="../pages/palletsApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">Pallet Receiving Tool</a>
-            <a href="../pages/skuDetailsApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">SKU Update Tool</a>
-            <a href="../pages/customerHoldApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">Customer Hold Tool</a>
-            <a href="../pages/npi-tool.html" class="mobile-menu-item" onclick="closeMobileMenu()">NPI Update Tool</a>
-            <a href="../pages/BatchUpdate.html" class="mobile-menu-item" onclick="closeMobileMenu()">Work Order Update Tool</a>
+            <a href="palletsApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">Pallet Receiving Tool</a>
+            <a href="skuDetailsApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">SKU Update Tool</a>
+            <a href="customerHoldApp.html" class="mobile-menu-item" onclick="closeMobileMenu()">Customer Hold Tool</a>
+            <a href="pages/npi-tool.html" class="mobile-menu-item" onclick="closeMobileMenu()">NPI Update Tool</a>
+            <a href="pages/BatchUpdate.html" class="mobile-menu-item" onclick="closeMobileMenu()">Work Order Update Tool</a>
           </div>
         </div>
 
@@ -116,10 +116,10 @@ class SpecialHeader extends HTMLElement {
         <div class="mobile-menu-section collapsed">
           <h4 class="mobile-menu-section-title" onclick="toggleMobileSection(this)">TV Reports</h4>
           <div class="mobile-menu-items">
-            <a href="../pages/ROG-TEST-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Rogue-Test</a>
-            <a href="../pages/ROG-DEBUG-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Rogue-Debug</a>
-            <a href="../pages/RUN-TEST-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Run-Test</a>
-            <a href="../pages/RUN-DEBUG-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Run-Debug</a>
+            <a href="ROG-TEST-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Rogue-Test</a>
+            <a href="ROG-DEBUG-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Rogue-Debug</a>
+            <a href="RUN-TEST-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Run-Test</a>
+            <a href="RUN-DEBUG-TV.html" class="mobile-menu-item" onclick="closeMobileMenu()">Run-Debug</a>
           </div>
         </div>
 
@@ -127,7 +127,7 @@ class SpecialHeader extends HTMLElement {
         <div class="mobile-menu-section collapsed">
           <h4 class="mobile-menu-section-title" onclick="toggleMobileSection(this)">Floor Tools</h4>
           <div class="mobile-menu-items">
-            <a href="../lookuptool.html" class="mobile-menu-item" onclick="closeMobileMenu()">Look-Up Tool</a>
+            <a href="lookuptool.html" class="mobile-menu-item" onclick="closeMobileMenu()">Look-Up Tool</a>
           </div>
         </div>
       </div>
@@ -137,6 +137,14 @@ class SpecialHeader extends HTMLElement {
   }
 
   setActiveLink() {
+    // Move normalizePath function to the top
+    function normalizePath(p) {
+      let path = (p || "").split("?")[0].split("#")[0];
+      if (!path || path === "/") path = "/index.html"; // treat root as index
+      if (path.endsWith("/") && path !== "/") path = path.slice(0, -1);
+      return path.toLowerCase();
+    }
+
     const current = normalizePath(location.pathname);
 
     // 1) Clear all actives
@@ -147,21 +155,19 @@ class SpecialHeader extends HTMLElement {
     const pageLinks = this.querySelectorAll(".sub a[href], .mobile-menu-items a[href]");
 
     pageLinks.forEach((link) => {
-      const rawHref = (link.getAttribute("href") || "").trim().toLowerCase();
+      const rawHref = (link.getAttribute("href") || "").trim();
       if (!rawHref || rawHref === "#" || rawHref.startsWith("javascript:")) return;
 
-      const linkPath = normalizePath(new URL(rawHref, location.origin).pathname);
-      if (linkPath === current) {
-        link.classList.add("active");
+      try {
+        const linkPath = normalizePath(new URL(rawHref, location.origin).pathname);
+        if (linkPath === current) {
+          link.classList.add("active");
+        }
+      } catch (error) {
+        // Handle any URL parsing errors gracefully
+        console.warn("Could not parse URL:", rawHref, error);
       }
     });
-
-    function normalizePath(p) {
-      let path = (p || "").split("?")[0].split("#")[0];
-      if (!path || path === "/") path = "/index.html"; // treat root as index
-      if (path.endsWith("/") && path !== "/") path = path.slice(0, -1);
-      return path.toLowerCase();
-    }
   }
 }
 
