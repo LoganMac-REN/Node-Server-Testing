@@ -3,7 +3,7 @@ class SpecialHeader extends HTMLElement {
     this.innerHTML = `
     <header class="topbar">
       <div class="brand">
-        <img src="../Images/renaissance-logo-full-color-rgb.svg" alt="Renaissance Repair & Supply" class="brand-logo" />
+        <img src="Images/renaissance-logo-full-color-rgb.svg" alt="Renaissance Repair & Supply" class="brand-logo" />
       </div>
       <!-- Desktop Navigation -->
       <div class="bar-inner">
