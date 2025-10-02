@@ -1,4 +1,4 @@
-const API_URL = "https://your-backend-domain.com/api/shippedRevenue";
+const API_URL = "https://node-server-testing.onrender.com/api/shippedRevenue";
 const REFRESH_MS = 30 * 60 * 1000; // 30 minutes
 
 async function updateShippedRevenue() {
