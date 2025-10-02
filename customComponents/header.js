@@ -3,7 +3,7 @@ class SpecialHeader extends HTMLElement {
     this.innerHTML = `
     <header class="topbar">
       <div class="brand">
-        <img src="../Images/renaissance-logo-full-color-rgb.svg" alt="Renaissance Repair & Supply" class="brand-logo" />
+        <img src="/Images/renaissance-logo-full-color-rgb.svg" alt="Renaissance Repair & Supply" class="brand-logo" />
       </div>
       <!-- Desktop Navigation -->
       <div class="bar-inner">
@@ -20,11 +20,11 @@ class SpecialHeader extends HTMLElement {
             <li class="has-sub">
               <a href="#" class="toplink">Departments</a>
               <ul class="sub">
-                <li><a href="/pages/operations.html">Operations</a></li>
-                <li><a href="/pages/engineering.html">Engineering</a></li>
-                <li><a href="/pages/supplychain.html">Supply Chain</a></li>
-                <li><a href="/pages/quality.html">Quality</a></li>
-                <li><a href="/pages/dashboards.html">Dashboards</a></li>
+                <li><a href="pages/operations.html">Operations</a></li>
+                <li><a href="pages/engineering.html">Engineering</a></li>
+                <li><a href="pages/supplychain.html">Supply Chain</a></li>
+                <li><a href="pages/quality.html">Quality</a></li>
+                <li><a href="pages/dashboards.html">Dashboards</a></li>
               </ul>
             </li>
 
@@ -32,28 +32,28 @@ class SpecialHeader extends HTMLElement {
             <li class="has-sub">
               <a href="#" class="toplink">Applications</a>
               <ul class="sub">
-                <li><a href="/pages/palletsApp.html">Pallet Receiving Tool</a></li>
-                <li><a href="/pages/skuDetailsApp.html">SKU Update Tool</a></li>
-                <li><a href="/pages/customerHoldApp.html">Customer Hold Tool</a></li>
-                <li><a href="/pages/npi-tool.html">NPI Update Tool</a></li>
-                <li><a href="/pages/BatchUpdate.html">Work Order Update Tool</a></li>
+                <li><a href="pages/palletsApp.html">Pallet Receiving Tool</a></li>
+                <li><a href="pages/skuDetailsApp.html">SKU Update Tool</a></li>
+                <li><a href="pages/customerHoldApp.html">Customer Hold Tool</a></li>
+                <li><a href="pages/npi-tool.html">NPI Update Tool</a></li>
+                <li><a href="pages/BatchUpdate.html">Work Order Update Tool</a></li>
               </ul>
             </li>
             <!-- TV Reports -->
             <li class="has-sub">
               <a href="#" class="toplink">TV Reports</a>
               <ul class="sub">
-                <li><a href="/pages/ROG-TEST-TV.html">Rogue-Test</a></li>
-                <li><a href="/pages/ROG-DEBUG-TV.html">Rogue-Debug</a></li>
-                <li><a href="/pages/RUN-TEST-TV.html">Run-Test</a></li>
-                <li><a href="/pages/RUN-DEBUG-TV.html">Run-Debug</a></li>
+                <li><a href="pages/ROG-TEST-TV.html">Rogue-Test</a></li>
+                <li><a href="pages/ROG-DEBUG-TV.html">Rogue-Debug</a></li>
+                <li><a href="pages/RUN-TEST-TV.html">Run-Test</a></li>
+                <li><a href="pages/RUN-DEBUG-TV.html">Run-Debug</a></li>
               </ul>
             </li>
             <!-- Floor Tools -->
             <li class="has-sub">
               <a href="#" class="toplink">Floor Tools</a>
               <ul class="sub">
-                <li><a href="/pages/lookuptool.html">Look-Up Tool</a></li>
+                <li><a href="pages/lookuptool.html">Look-Up Tool</a></li>
               </ul>
             </li>
           </ul>
@@ -84,7 +84,7 @@ class SpecialHeader extends HTMLElement {
         <div class="mobile-menu-section collapsed">
           <h4 class="mobile-menu-section-title" onclick="toggleMobileSection(this)">OTD Dashboards</h4>
           <div class="mobile-menu-items">
-            <a href="../index.html" class="mobile-menu-item" onclick="closeMobileMenu()">Combined OTD Report</a>
+            <a href="index.html" class="mobile-menu-item" onclick="closeMobileMenu()">Combined OTD Report</a>
           </div>
         </div>
 
