@@ -1,17 +1,3 @@
-//Mobile Menu bar
-function toggleMobileMenu() {
-  const body = document.body;
-  if (body.classList.contains("mobile-menu-open")) {
-    body.classList.remove("mobile-menu-open");
-    // Restore body scroll
-    document.body.style.overflow = "";
-  } else {
-    body.classList.add("mobile-menu-open");
-    // Prevent body scroll when menu is open
-    document.body.style.overflow = "hidden";
-  }
-}
-
 function closeMobileMenu() {
   document.body.classList.remove("mobile-menu-open");
   // Restore body scroll
