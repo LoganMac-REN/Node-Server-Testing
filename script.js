@@ -1,24 +1,3 @@
-const API_URL = "https://node-server-testing.onrender.com/api/shippedRevenue";
-const REFRESH_MS = 30 * 60 * 1000; // 30 minutes
-
-async function updateShippedRevenue() {
-  try {
-    const res = await fetch(API_URL);
-    const data = await res.json();
-
-    document.getElementById("shippedRevenue").textContent = "Shipped Revenue Month to Date: $" + data.value;
-  } catch (err) {
-    console.error("Failed to load shippedRevenue", err);
-  }
-}
-
-// Run once on page load
-document.addEventListener("DOMContentLoaded", () => {
-  updateShippedRevenue();
-  // Refresh on the page every 30 minutes too
-  setInterval(updateShippedRevenue, REFRESH_MS);
-});
-
 //Mobile Menu bar
 function toggleMobileMenu() {
   const body = document.body;
